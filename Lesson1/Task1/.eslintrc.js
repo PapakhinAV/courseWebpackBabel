@@ -13,6 +13,7 @@ module.exports = {
     },
     rules: {
         indent: 'off',
+        'import/prefer-default-export': 'off',
     },
     overrides: [
         {

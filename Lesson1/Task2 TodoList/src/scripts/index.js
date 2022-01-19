@@ -5,19 +5,18 @@ import { setItem } from './storage.js';
 
 document.addEventListener('DOMContentLoaded', () => {
     getTasksList()
-        .then(tasksList => {
-            setItem('tasksList', tasksList)
+        .then((tasksList) => {
+            setItem('tasksList', tasksList);
             renderTasks();
         });
-    
+
     initTodoListHandlers();
 });
 
-const onStarageChange = e => {
+const onStarageChange = (e) => {
     if (e.key === 'tasksList') {
         renderTasks();
     }
 };
 
 window.addEventListener('storage', onStarageChange);
-

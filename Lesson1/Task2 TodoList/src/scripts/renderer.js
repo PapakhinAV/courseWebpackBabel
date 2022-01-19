@@ -5,7 +5,7 @@ const listElem = document.querySelector('.list');
 const compareTasks = (a, b) => {
     if (a.done - b.done !== 0) {
         return a.done - b.done;
-    };
+    }
 
     if (a.done) {
         return new Date(b.finishDate) - new Date(a.finishDate);
@@ -22,7 +22,7 @@ const createCheckbox = ({ done, id }) => {
     checkboxElem.classList.add('list-item__checkbox');
 
     return checkboxElem;
-}
+};
 
 const createListItem = ({ text, done, id }) => {
     const listItemElem = document.createElement('li');
@@ -42,7 +42,7 @@ const createListItem = ({ text, done, id }) => {
     listItemElem.append(checkboxElem, textElem, deleteBtnElem);
 
     return listItemElem;
-}
+};
 
 export const renderTasks = () => {
     const tasksList = getItem('tasksList') || [];
